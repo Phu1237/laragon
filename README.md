@@ -20,9 +20,23 @@ If you want to download newest version of dependencies:
 
 ### Notes
 
+- All dependencies in this repo use 64 bit version.
 - For PHP: I prefer *Non Thread Safe* version.
 - Apache & PHP must be the same VS version (ex: VS15).
-- All dependencies in this repo use 64 bit version.
+- To enable http2:
+  - Uncomment the line
+
+  ```bash
+  LoadModule http2_module modules/mod_http2.so
+  ```
+
+  - Add this line at the end of the file
+
+  ```bash
+  Protocols h2 h2c http/1.1
+  ```
+
+
 
 ## What is Laragon?
 
