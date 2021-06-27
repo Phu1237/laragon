@@ -1,5 +1,6 @@
-www/*
-!www/index.php
+/www/*
+!/www/index.php
 /data
-tmp/*
-!tmp/.gitignore
+/tmp/*
+!/tmp/.gitignore
+/private
