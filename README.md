@@ -11,11 +11,7 @@ There are 2 ways:
 
 ## Update
 
-Run below command to pull all new changes from this repo and remove all "auto generated" files. You can call it "Update new version".
-
-```bash
-git fetch origin && git reset --hard origin/master && git clean -f -d
-```
+Run the [update.bat](update.bat) to pull all new changes from this repo and remove all "auto generated" files. You can call it "Update new version".
 
 **Notes:**
 
