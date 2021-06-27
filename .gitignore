@@ -1,3 +1,5 @@
 www/*
 !www/index.php
 /data
+tmp/*
+!tmp/.gitignore
