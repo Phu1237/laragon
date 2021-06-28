@@ -1,4 +1,9 @@
 @echo off
+::create scripts logs folder if not exists
+if not exist tmp\scripts\ (
+    mkdir tmp\scripts
+)
+::change directory
 cd ./bin/scripts
 
 :begin
