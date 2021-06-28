@@ -2,4 +2,5 @@
 !/www/index.php
 /data
 /tmp/*
+/tmp/scripts/*
 /private
