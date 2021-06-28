@@ -6,22 +6,37 @@ There are 2 ways:
 
 - You can download the newest released version [here](https://github.com/Phu1237/laragon/releases).
 - Clone this repo
-  - You can update new version throw command at [#update](#update).
-  - You should rename .git folder after clone to another name (ex: .git to .git1) to prevent some bugs with git and rename it back when you want to update new version (ex: .git1 to .git).
+  - You can use scripts at [#scripts](#scripts).
 
-## Update
+## Scripts
 
-Run the [update.bat](update.bat) to pull all new changes from this repo and remove all "auto generated" files. You can call it "Update new version".
+Please read carefully the content below and **use this scripts at your own risk**!
+
+Use [scripts.bat](scripts.bat) at root of your laragon.
+
+Available scripts:
+
+- Rename folder .git to .git.saved - Rename folder .git.saved to .git
+  - Prevent some git bugs with your code in /www folder
+- Update Laragon
+  - This method just work when you **clone** this repo.
+  - This method is working like **hard-reset** all your laragon files of laragon and pull new commits (changes) from the repo. You can call it "Update new version".
+  - Be careful when you run it because it will **overwrite** your changes and **remove** your files.
+  - This will **not affect** to your files in:
+    - /bin/heidisql/portable_settings.txt (heidisql settings)
+    - /data
+    - /tmp
+    - /usr (all of laragon settings)
+    - /www (except /www/index.php)
+  - **All other files will be replaced or removed**.
 
 **Notes:**
 
-- This method just work when you clone this repo.
-- This will not affect to your files in /data and /www (except www/index.php).
-- Be careful when you run it because it will replace your changes to laragon files.
+- If you want to update, please back up your dependencies extensions (ex: php_pdo_sqlsrv) because you will lose all your changes if you run update.
 
-## Dependencies
+## Manual update
 
-If you want to download newest version of dependencies:
+If you want to manual update new version of dependencies, download the file with the instructions below and extract it to **/bin/\<dependency\>/new_version_folder** (ex: /bin/php/php-7.4.20-nts-Win32-vc15-x64)
 
 - Apache: Download the zip file [VC15](https://www.apachelounge.com/download/VC15/) or [VC16](https://www.apachelounge.com/download/)
 - HeidiSQL: Download the portable version [here](https://www.heidisql.com/download.php)
