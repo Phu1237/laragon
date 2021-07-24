@@ -51,7 +51,7 @@ If you want to manual update new version of dependencies, download the file with
 
 **Notes:**
 
-- **Apache SSL is broken right now, it is a bug, error of Apache, no way to fix this right now. If you want to using SSL, please use Nginx**.
+- If you want to using SSL, please use Apache v2.4.35 (httpd-2.4.35-win64-VC15) or use Nginx. **Because newest Apache SSL is broken right now, it is a bug, error of Apache, no way to fix this right now. **.
 - All dependencies in this repo use 64 bit version.
 - For PHP: I prefer *Non Thread Safe* version.
 - Apache & PHP must be the same VS version (ex: VS15).
