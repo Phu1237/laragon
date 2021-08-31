@@ -51,20 +51,35 @@ If you want to manual update new version of dependencies, download the file with
 
 **Notes:**
 
-- If you want to using SSL, please use Apache v2.4.35 (httpd-2.4.35-win64-VC15) or use Nginx. **Because newest Apache SSL is broken right now, it is a bug, error of Apache, no way to fix this right now. **.
+- If you want to using SSL, please use Apache v2.4.35 (httpd-2.4.35-win64-VC15) or use Nginx. **Because newest Apache SSL is broken right now, it may be a bug or an error of Apache and no way to fix this right now**.
 - All dependencies in this repo use 64 bit version.
 - For PHP: I prefer *Non Thread Safe* version.
-- Apache & PHP must be the same VS version (ex: VS15).
+- Apache & PHP should be the same VS version (ex: VS15).
+- To enable redis:
+  - After start laragon for the first time (php.ini created)
+  - Find
+  
+  ```text
+  extension=mbstring
+  ```
+  
+  - Add below that line
+  
+  ```text
+  extension=redis
+  ```
+
 - To enable http2:
+  - Open *bin/apache/\<version>/conf/httpd.conf*
   - Uncomment the line
 
-  ```bash
+  ```text
   LoadModule http2_module modules/mod_http2.so
   ```
 
   - Add this line at the end of the file
 
-  ```bash
+  ```text
   Protocols h2 h2c http/1.1
   ```
 
