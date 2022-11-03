@@ -48,6 +48,7 @@ If you want to manual update new version of dependencies, download the file with
     - Package Type: Zip file
 - Nginx: Download the zip file [here](http://nginx.org/en/download.html)
 - PHP: Download the zip file [here](https://windows.php.net/download/)
+    - PHP Redis extension: [here](https://pecl.php.net/package/redis)
 
 **Notes:**
 
