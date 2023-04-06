@@ -8,25 +8,35 @@ There are 2 ways:
 - Clone this repo
   - You can use scripts at [#scripts](#scripts).
 
+## PHP Version information
+
+The default PHP version in the first launch is PHP 7.4
+
+|Name|Version|
+|-|-|
+|php-7.4|7.4.33|
+|php-8.1|8.1.17|
+|php-8.2|8.2.4|
+
 ## Scripts
 
 Please read carefully the content below and **use this scripts at your own risk**!
 
-Use [scripts.bat](scripts.bat) at root of your laragon.
+Use [scripts.bat](scripts.bat) at the root of your laragon.
 
 Available scripts:
 
 - Rename folder .git to .git.saved - Rename folder .git.saved to .git
   - Prevent some git bugs with your code in /www folder
 - Update Laragon
-  - This method just work when you **clone** this repo.
-  - This method is working like **hard-reset** all your laragon files of laragon and pull new commits (changes) from the repo. You can call it "Update new version".
+  - This method just works when you **clone** this repo.
+  - This method is working as a **hard-reset** all your Laragon files of laragon and pulling new commits (changes) from the repo. You can call it "Update new version".
   - Be careful when you run it because it will **overwrite** your changes and **remove** your files.
-  - This will **not affect** to your files in:
+  - This will **not affect** your files in:
     - /bin/heidisql/portable_settings.txt (heidisql settings)
     - /data
     - /tmp
-    - /usr (all of laragon settings)
+    - /usr (all of the laragon settings)
     - /www (except /www/index.php)
   - **All other files will be replaced or removed**.
 
@@ -36,7 +46,7 @@ Available scripts:
 
 ## Manual update
 
-If you want to manual update new version of dependencies, download the file with the instructions below and extract it to **/bin/\<dependency\>/new_version_folder** (ex: /bin/php/php-7.4.20-nts-Win32-vc15-x64)
+If you want to manually update the new version of dependencies, download the file with the instructions below and extract it to **/bin/\<dependency\>/new_version_folder** (ex: /bin/php/php-7.4.20-nts-Win32-vc15-x64)
 
 - Apache: Download the zip file [VC15](https://www.apachelounge.com/download/VC15/) or [VC16](https://www.apachelounge.com/download/)
 - HeidiSQL: Download the portable version [here](https://www.heidisql.com/download.php)
@@ -52,20 +62,20 @@ If you want to manual update new version of dependencies, download the file with
 
 **Notes:**
 
-- If you want to using SSL, please use Apache v2.4.35 (httpd-2.4.35-win64-VC15) or use Nginx. **Because newest Apache SSL is broken right now, it may be a bug or an error of Apache and no way to fix this right now**.
-- All dependencies in this repo use 64 bit version.
+- If you want to use SSL, please use Apache v2.4.35 (httpd-2.4.35-win64-VC15) or use Nginx. **Because the newest Apache SSL is broken right now, it may be a bug or an error of Apache and no way to fix this right now**.
+- All dependencies in this repo use 64-bit version.
 - For PHP: I prefer *Non Thread Safe* version.
 - Apache & PHP should be the same VS version (ex: VS15).
-- To enable redis:
-  - After start laragon for the first time (php.ini created)
+- To enable Redis:
+  - After starting laragon for the first time (php.ini created)
   - Find
-  
+
   ```text
   extension=mbstring
   ```
-  
+
   - Add below that line
-  
+
   ```text
   extension=redis
   ```
