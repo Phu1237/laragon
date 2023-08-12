@@ -15,8 +15,8 @@ The default PHP version in the first launch is PHP 7.4
 |Name|Version|
 |-|-|
 |php-7.4|7.4.33|
-|php-8.1|8.1.17|
-|php-8.2|8.2.4|
+|php-8.1|8.1.22|
+|php-8.2|8.2.9|
 
 ## Scripts
 
@@ -49,6 +49,7 @@ Available scripts:
 If you want to manually update the new version of dependencies, download the file with the instructions below and extract it to **/bin/\<dependency\>/new_version_folder** (ex: /bin/php/php-7.4.20-nts-Win32-vc15-x64)
 
 - Apache: Download the zip file [VC15](https://www.apachelounge.com/download/VC15/) or [VC16](https://www.apachelounge.com/download/)
+- Composer: Download the composer.phar file from [here](https://getcomposer.org/download/#composer-history-caption)
 - HeidiSQL: Download the portable version [here](https://www.heidisql.com/download.php)
 - MySQL:
   - MariaDB: Download the zip file [here](https://mariadb.org/download/)
