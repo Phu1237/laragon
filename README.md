@@ -15,8 +15,9 @@ The default PHP version in the first launch is PHP 7.4
 |Name|Version|
 |-|-|
 |php-7.4|7.4.33|
-|php-8.1|8.1.22|
-|php-8.2|8.2.9|
+|php-8.1|8.1.27|
+|php-8.2|8.2.16|
+|php-8.3|8.3.3|
 
 ## Scripts
 
@@ -30,10 +31,10 @@ Available scripts:
   - Prevent some git bugs with your code in /www folder
 - Update Laragon
   - This method just works when you **clone** this repo.
-  - This method is working as a **hard-reset** all your Laragon files of laragon and pulling new commits (changes) from the repo. You can call it "Update new version".
+  - This method works as a **hard resetting** all your Laragon files of laragon and pulling new commits (changes) from the repo. You can call it "Update new version".
   - Be careful when you run it because it will **overwrite** your changes and **remove** your files.
   - This will **not affect** your files in:
-    - /bin/heidisql/portable_settings.txt (heidisql settings)
+    - /bin/heidisql/portable_settings.txt (HeidiSQL settings)
     - /data
     - /tmp
     - /usr (all of the laragon settings)
@@ -59,7 +60,7 @@ If you want to manually update the new version of dependencies, download the fil
     - Package Type: Zip file
 - Nginx: Download the zip file [here](http://nginx.org/en/download.html)
 - PHP: Download the zip file [here](https://windows.php.net/download/)
-    - PHP Redis extension: [here](https://pecl.php.net/package/redis)
+    - PHP Redis extension: [here](https://pecl.php.net/package/redis) or [Download in any workflow](https://github.com/phpredis/phpredis/actions/workflows/ci.yml)
 
 **Notes:**
 
