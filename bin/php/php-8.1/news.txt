@@ -1,5 +1,86 @@
 PHP                                                                        NEWS
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+21 Nov 2024, PHP 8.1.31
+
+- CLI:
+  . Fixed bug GHSA-4w77-75f9-2c8w (Heap-Use-After-Free in sapi_read_post_data
+    Processing in CLI SAPI Interface). (nielsdos)
+
+- LDAP:
+  . Fixed bug GHSA-g665-fm4p-vhff (OOB access in ldap_escape). (CVE-2024-8932)
+    (nielsdos)
+
+- MySQLnd:
+  . Fixed bug GHSA-h35g-vwh6-m678 (Leak partial content of the heap through
+    heap buffer over-read). (CVE-2024-8929) (Jakub Zelenka)
+
+- PDO DBLIB:
+  . Fixed bug GHSA-5hqh-c84r-qjcv (Integer overflow in the dblib quoter causing
+    OOB writes). (CVE-2024-11236) (nielsdos)
+
+- PDO Firebird:
+  . Fixed bug GHSA-5hqh-c84r-qjcv (Integer overflow in the firebird quoter
+    causing OOB writes). (CVE-2024-11236) (nielsdos)
+
+- Streams:
+  . Fixed bug GHSA-c5f2-jwm7-mmq2 (Configuring a proxy in a stream context
+    might allow for CRLF injection in URIs). (CVE-2024-11234) (Jakub Zelenka)
+  . Fixed bug GHSA-r977-prxv-hc43 (Single byte overread with
+    convert.quoted-printable-decode filter). (CVE-2024-11233) (nielsdos)
+
+
+
+26 Sep 2024, PHP 8.1.30
+
+- CGI:
+  . Fixed bug GHSA-p99j-rfp4-xqvq (Bypass of CVE-2024-4577, Parameter Injection
+    Vulnerability). (CVE-2024-8926) (nielsdos)
+  . Fixed bug GHSA-94p6-54jq-9mwp (cgi.force_redirect configuration is
+    bypassable due to the environment variable collision). (CVE-2024-8927)
+    (nielsdos)
+
+- FPM:
+  . Fixed bug GHSA-865w-9rf3-2wh5 (Logs from childrens may be altered).
+    (CVE-2024-9026) (Jakub Zelenka)
+
+- SAPI:
+  . Fixed bug GHSA-9pqp-7h25-4f32 (Erroneous parsing of multipart form data).
+    (CVE-2024-8925) (Arnaud)
+
+06 Jun 2024, PHP 8.1.29
+
+- CGI:
+  . Fixed bug GHSA-3qgc-jrrr-25jv (Bypass of CVE-2012-1823, Argument Injection
+    in PHP-CGI). (CVE-2024-4577) (nielsdos)
+
+- Filter:
+  . Fixed bug GHSA-w8qr-v226-r27w (Filter bypass in filter_var FILTER_VALIDATE_URL).
+    (CVE-2024-5458) (nielsdos)
+
+- OpenSSL:
+  . The openssl_private_decrypt function in PHP, when using PKCS1 padding
+    (OPENSSL_PKCS1_PADDING, which is the default), is vulnerable to the Marvin Attack
+    unless it is used with an OpenSSL version that includes the changes from this pull
+    request: https://github.com/openssl/openssl/pull/13817 (rsa_pkcs1_implicit_rejection).
+    These changes are part of OpenSSL 3.2 and have also been backported to stable
+    versions of various Linux distributions, as well as to the PHP builds provided for
+    Windows since the previous release. All distributors and builders should ensure that
+    this version is used to prevent PHP from being vulnerable. (CVE-2024-2408)
+
+- Standard:
+  . Fixed bug GHSA-9fcc-425m-g385 (Bypass of CVE-2024-1874).
+    (CVE-2024-5585) (nielsdos)
+
+11 Apr 2024, PHP 8.1.28
+
+- Standard:
+  . Fixed bug GHSA-pc52-254m-w9w7 (Command injection via array-ish $command
+    parameter of proc_open). (CVE-2024-1874) (Jakub Zelenka)
+  . Fixed bug GHSA-wpj3-hf5j-x4v4 (__Host-/__Secure- cookie bypass due to
+    partial CVE-2022-31629 fix). (CVE-2024-2756) (nielsdos)
+  . Fixed bug GHSA-h746-cjrr-wfmr (password_verify can erroneously return true,
+    opening ATO risk). (CVE-2024-3096) (Jakub Zelenka)
+
 21 Dec 2023, PHP 8.1.27
 
 - Core:
@@ -17,7 +98,7 @@ PHP                                                                        NEWS
 - FPM:
   . Fixed bug GH-12705 (Segmentation fault in fpm_status_export_to_zval).
     (Patrick Prasse)
-   
+
 - Intl:
   . Fixed bug GH-12635 (Test bug69398.phpt fails with ICU 74.1). (nielsdos)
 

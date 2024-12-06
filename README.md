@@ -15,9 +15,10 @@ The default PHP version in the first launch is PHP 7.4
 |Name|Version|
 |-|-|
 |php-7.4|7.4.33|
-|php-8.1|8.1.27|
-|php-8.2|8.2.16|
-|php-8.3|8.3.3|
+|php-8.1|8.1.31|
+|php-8.2|8.2.26|
+|php-8.3|8.3.14|
+|php-8.4|8.4.1|
 
 ## Scripts
 
